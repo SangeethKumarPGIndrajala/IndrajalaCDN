@@ -19,7 +19,7 @@ function ManageAds({ token }) {
   const fetchAds = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:20000/api/admin/get-all-advertisements",
+        "https://api.indrajala.in/api/admin/get-all-advertisements",
         {
           headers: {
             "x-access-protected": token,
@@ -40,7 +40,7 @@ function ManageAds({ token }) {
 
   const handleStatusChange = async(adId, status) => {
     const response = await axios.post(
-        'http://localhost:20000/api/admin/update-ad-status',
+        'https://api.indrajala.in/api/admin/update-ad-status',
         {
             adId: adId,
             status: status

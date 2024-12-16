@@ -89,7 +89,7 @@ function Advertisement({ token }) {
       formData.append("desktopImage", desktopAdImage);
       console.log(formData);
       const response = await axios.post(
-        "http://localhost:20000/api/admin/add-advertisement",
+        "https://api.indrajala.in/api/admin/add-advertisement",
         formData,
         {
           headers: {
