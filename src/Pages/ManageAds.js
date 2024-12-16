@@ -40,7 +40,7 @@ function ManageAds({ token }) {
 
   const handleStatusChange = async(adId, status) => {
     const response = await axios.post(
-        'https://api.indrajala.in/api/admin/update-ad-status',
+      "https://api.indrajala.in/api/admin/update-ad-status",
         {
             adId: adId,
             status: status
