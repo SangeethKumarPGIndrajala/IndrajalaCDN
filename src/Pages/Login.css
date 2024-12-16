@@ -1,0 +1,40 @@
+/* src/Login.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://example.com/your-background-image.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.login-title {
+    margin-bottom: 20px;
+    color: white; /* Change text color for visibility */
+}
+
+.login-form {
+    background: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Fixed width for the form */
+}
+
+.login-button {
+    margin-top: 20px;
+    background-color: #3f51b5; /* Change button color */
+    color: white;
+}
+
+.login-button:hover {
+    background-color: #303f9f; /* Darker shade on hover */
+}

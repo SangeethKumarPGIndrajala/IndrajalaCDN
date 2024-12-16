@@ -1,0 +1,142 @@
+/* Main container for the page */
+.manage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Center the title in the page */
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  
+  /* Split page into two halves */
+  .split-page {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    justify-content: space-between;
+  }
+  
+  /* Left side (Available Movies) */
+  .available-movies {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Movie list container */
+  .movie-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Each movie item */
+  .movie-item {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .movie-item:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Image part of the movie item (1/3 width) */
+  .movie-image {
+    flex: 1;
+    max-width: 33.33%;
+  }
+  
+  .movie-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Details part of the movie item (2/3 width) */
+  .movie-details {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .movie-details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .movie-category {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  /* Add to List button */
+  .add-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-button[disabled] {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+
+  .add-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Right side (Top Five Movies) */
+  .top-five-section {
+    flex: 1;
+    padding: 20px;
+    border-left: 2px solid #ddd;
+  }
+  
+  /* Remove from List button */
+.remove-button {
+  padding: 10px 20px;
+  background-color: #dc3545; /* Red background for remove button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Spacing between button and other content */
+}
+
+.remove-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.remove-button:disabled {
+  background-color: #6c757d; /* Gray out the button if disabled */
+  cursor: not-allowed;
+}
