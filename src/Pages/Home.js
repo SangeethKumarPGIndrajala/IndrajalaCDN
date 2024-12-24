@@ -10,6 +10,8 @@ import ManageTopFive from './ManageTopFive';
 import ManageTrending from './Trending';
 import Advertisement from './Advertisement';
 import ManageAds from './ManageAds';
+import AddVideoAds from './AddVideoAds';
+import ManageVideoAds from './ManageVideoAds';
 
 const Home = () => {
     const token = Cookies.get('token'); // Get the token from cookies
@@ -38,6 +40,10 @@ const Home = () => {
                     return <Advertisement token={token} />;
             case'manageads':
                     return <ManageAds token={token} />;
+            case 'addvideoads':
+                  return <AddVideoAds token={token} />;
+            case 'managevideoads':
+                  return <ManageVideoAds token={token}/>;
             default:
                 return <Typography variant="h6">Please select an option from the left.</Typography>;
         }
@@ -71,6 +77,12 @@ const Home = () => {
                         </ListItem>
                         <ListItem button onClick={()=>setSelectedOption('manageads')} className='sidebar-item'>
                             <ListItemText primary="Manage Advertisements" />
+                        </ListItem>
+                        <ListItem button onClick={()=>setSelectedOption('addvideoads')} className='sidebar-item'>
+                            <ListItemText primary="Add Video Advertisement" />
+                        </ListItem>
+                        <ListItem button onClick={()=>setSelectedOption('managevideoads')} className='sidebar-item'>
+                            <ListItemText primary="Manage Video Advertisements" />
                         </ListItem>
                     </List>
                 </Box>
