@@ -11,13 +11,15 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-
+// http://localhost:20000/
+// https://api.indrajala.in
 function AddVideoAds({ token }) {
   const [selectedAdType, setSelectedAdType] = useState("");
   const [descriptionText, setDescriptionText] = useState("");
   const [videoFile, setVideoFile] = useState(null);
   const [error, setError] = useState("");
   const [adTitle, setAdTitle] = useState("");
+  const [adRedirectUrl, setAdRedirectUrl] = useState("");
 
   // Update the descriptionText based on selectedAdType
   useEffect(() => {
@@ -61,6 +63,7 @@ function AddVideoAds({ token }) {
     formData.append("adVideo", videoFile);
     formData.append("title", adTitle);
     formData.append("adType", selectedAdType);
+    formData.append("adRedirectURL", adRedirectUrl);
     // alert("Video submitted successfully!"); 
     const response = await axios.post(
         "https://api.indrajala.in/api/admin/add-ad-video",
@@ -111,6 +114,14 @@ function AddVideoAds({ token }) {
               value={adTitle}
               onChange={(event) => setAdTitle(event.target.value)}
             />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+             fullWidth
+             label="ad redirect url"
+             value={adRedirectUrl}
+             onChange={(event) => setAdRedirectUrl(event.target.value)}
+             />
           </Grid>
           <Grid item xs={12}>
             {descriptionText && (
